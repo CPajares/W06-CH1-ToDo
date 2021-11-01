@@ -1,12 +1,12 @@
 import "./App.css";
-import Card from "./components/Card/Card";
 import Form from "./components/Form/Form";
+import TaskList from "./components/TaskList/TaskList";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Card />
+        <TaskList />
         <Form />
       </div>
     </>
