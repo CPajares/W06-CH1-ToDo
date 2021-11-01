@@ -10,3 +10,5 @@ const configureStore = (initialValues) => {
     composeWithDevTools(applyMiddleware(thunk))
   );
 };
+
+export default configureStore;
