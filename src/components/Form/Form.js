@@ -2,7 +2,7 @@ import { useState } from "react";
 import useTasks from "../../hooks/useTasks";
 
 const Form = () => {
-  const { tasks, createTask } = useTasks();
+  const { createTask } = useTasks();
 
   const initialData = {
     name: "",
