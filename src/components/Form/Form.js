@@ -1,7 +1,7 @@
 const Form = () => {
   return (
     <>
-      <p>Create task</p>
+      <h2>Form:</h2>
       <form>
         <label htmlFor="task">First name:</label>
         <input type="text" id="fname" name="task" />
