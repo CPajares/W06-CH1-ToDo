@@ -1,6 +1,6 @@
 import "./Card.css";
 
-const Card = ({ name, id, state }) => {
+const Card = ({ name, state }) => {
   return (
     <>
       <h2>Task:</h2>

@@ -10,7 +10,7 @@ export const loadTasksThunks = () => {
 
 export const createTaskThunks = (task) => {
   return async (dispatch) => {
-    const response = await fetch("http://wk06todo.herokuapp.com/todo", {
+    const response = await fetch("https://wk06todo.herokuapp.com/todo", {
       method: "POST",
       body: JSON.stringify(task),
       headers: {

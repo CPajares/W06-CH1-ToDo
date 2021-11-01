@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given the Card component When it´s called with the name patata Should render a Card with name patata 1`] = `
+Array [
+  <h2>
+    Task:
+  </h2>,
+  <li
+    className="task"
+  >
+    <p>
+      patata
+    </p>
+    <p>
+      pending
+    </p>
+    <button
+      type="button"
+    >
+      update
+    </button>
+    <button
+      type="button"
+    >
+      delete
+    </button>
+  </li>,
+]
+`;
+
+exports[`dsfdsf sdgdsgdfsg dfgdfg 1`] = `
+Array [
+  <h2>
+    Task:
+  </h2>,
+  <li
+    className="task"
+  >
+    <p>
+      patata
+    </p>
+    <p>
+      pending
+    </p>
+    <button
+      type="button"
+    >
+      update
+    </button>
+    <button
+      type="button"
+    >
+      delete
+    </button>
+  </li>,
+]
+`;
