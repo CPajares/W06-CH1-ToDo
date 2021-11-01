@@ -6,6 +6,9 @@ const todoReducer = (tasks = [], action) => {
     case actionTypes.loadTasks:
       newTasks = [...action.tasks];
       break;
+    case actionTypes.createTask:
+      newTasks = [...tasks, action.task];
+      break;
     default:
       break;
   }
