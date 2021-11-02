@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import useTasks from "../../hooks/useTasks";
 import "./Card.css";
 
 const Card = ({ id, name, state, onclick }) => {
