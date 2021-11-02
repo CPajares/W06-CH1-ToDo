@@ -7,8 +7,12 @@ const Card = ({ name, state }) => {
       <li className="task">
         <p>{name}</p>
         <p>{state ? "pending" : "finished"}</p>
-        <button type="button">update</button>
-        <button type="button">delete</button>
+        <button className="btn btn-primary" type="button">
+          update
+        </button>
+        <button className="btn btn-danger" type="button">
+          delete
+        </button>
       </li>
     </>
   );
