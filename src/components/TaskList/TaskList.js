@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import useTasks from "../../hooks/useTasks";
 import Card from "../Card/Card";
 
