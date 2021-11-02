@@ -29,6 +29,7 @@ const Form = () => {
       <form onSubmit={onSubmit}>
         <label htmlFor="name">First name:</label>
         <input
+          className="form-control"
           onChange={onChange}
           type="text"
           value={newTaskData.name}
@@ -37,7 +38,7 @@ const Form = () => {
         />
         <br />
 
-        <button type="submit" value="Submit">
+        <button className="btn btn-primary" type="submit" value="Submit">
           Create
         </button>
       </form>

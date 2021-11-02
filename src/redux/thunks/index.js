@@ -1,4 +1,8 @@
-import { createTaskAction, loadTasksAction } from "../actions/ActionCreators";
+import {
+  createTaskAction,
+  deleteTaskAction,
+  loadTasksAction,
+} from "../actions/ActionCreators";
 
 export const loadTasksThunks = () => {
   return async (dispatch) => {
@@ -20,5 +24,17 @@ export const createTaskThunks = (task) => {
     const newTasks = await response.json();
 
     dispatch(createTaskAction(newTasks));
+  };
+};
+
+export const deleteTaskThunks = (id) => {
+  return async (dispatch) => {
+    const response = await fetch(`https://wk06todo.herokuapp.com/todo/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      dispatch(deleteTaskAction(id));
+    }
   };
 };
