@@ -1,6 +1,8 @@
+import { useEffect } from "react";
+import useTasks from "../../hooks/useTasks";
 import "./Card.css";
 
-const Card = ({ name, state }) => {
+const Card = ({ id, name, state, onclick }) => {
   return (
     <>
       <h2>Task:</h2>
@@ -10,7 +12,7 @@ const Card = ({ name, state }) => {
         <button className="btn btn-primary" type="button">
           update
         </button>
-        <button className="btn btn-danger" type="button">
+        <button onClick={onclick} className="btn btn-danger" type="button">
           delete
         </button>
       </li>

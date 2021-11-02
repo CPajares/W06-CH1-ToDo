@@ -29,10 +29,12 @@ export const createTaskThunks = (task) => {
 
 export const deleteTaskThunks = (id) => {
   return async (dispatch) => {
-    const response = await fetch(
-      `herokhttps://wk06todo.herokuapp.com/todouapp/${id}`
-    );
-    const newTasks = await response.json();
-    dispatch(deleteTaskAction(newTasks));
+    const response = await fetch(`https://wk06todo.herokuapp.com/todo/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      dispatch(deleteTaskAction(id));
+    }
   };
 };
