@@ -8,7 +8,13 @@ import {
 } from "../redux/thunks";
 
 const useTasks = () => {
-  const tasks = useSelector((store) => store.tasks);
+  /* const tasks = useSelector((store) => store.tasks);  Con un reducer */
+
+  //Con dos desestructurando >
+  const { currentTask, task } = useSelector(({ currentTask, task }) => ({
+    currentTask,
+    task,
+  }));
   const dispatch = useDispatch();
 
   const loadTasks = useCallback(() => {
@@ -27,7 +33,8 @@ const useTasks = () => {
   };
 
   return {
-    tasks,
+    currentTask,
+    task,
     loadTasks,
     createTask,
     deleteTask,
