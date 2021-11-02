@@ -2,7 +2,7 @@ import useTasks from "../../hooks/useTasks";
 import Card from "../Card/Card";
 
 const TaskList = () => {
-  const { tasks, loadTasks, deleteTask, loadCurrentTask } = useTasks();
+  const { tasks, loadTasks, deleteTask } = useTasks();
 
   const clickDeleteTask = (event, id) => {
     deleteTask(id);

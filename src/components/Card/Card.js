@@ -3,10 +3,10 @@ import useTasks from "../../hooks/useTasks";
 import "./Card.css";
 
 const Card = ({ onclick, task }) => {
-  const { loadCurrentTask, currentTask } = useTasks();
+  const { loadCurrentTask } = useTasks();
 
-  const clickUpdate = () => {
-    loadCurrentTask(currentTask);
+  const clickUpdate = (evento) => {
+    loadCurrentTask(task);
   };
 
   return (
