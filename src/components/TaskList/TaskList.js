@@ -2,7 +2,7 @@ import useTasks from "../../hooks/useTasks";
 import Card from "../Card/Card";
 
 const TaskList = () => {
-  const { tasks, loadTasks, deleteTask } = useTasks();
+  const { tasks, loadTasks, deleteTask, loadCurrentTask } = useTasks();
 
   const clickDeleteTask = (event, id) => {
     deleteTask(id);
@@ -16,9 +16,7 @@ const TaskList = () => {
           <Card
             onclick={(event) => clickDeleteTask(event, task.id)}
             key={task.id}
-            name={task.name}
-            state={task.state}
-            id={task.id}
+            task={task}
           />
         ))}
       </ul>

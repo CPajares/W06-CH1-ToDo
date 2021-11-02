@@ -1,5 +1,4 @@
 import actionTypes from "../actions/ActionTypes";
-import todoReducer from "./todoReducer";
 
 const todoCurrentReducer = (
   currenTask = { isEditing: false, task: {} },
