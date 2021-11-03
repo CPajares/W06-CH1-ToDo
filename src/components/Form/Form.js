@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useTasks from "../../hooks/useTasks";
-import {
-  loadCurrentTaskAction,
-  loadTasksAction,
-} from "../../redux/actions/ActionCreators";
 
 const Form = () => {
   const { currentTask, createTask } = useTasks();
@@ -48,7 +44,6 @@ const Form = () => {
           {currentTask.isEditing ? "edit" : "create"}
         </button>
       </form>
-      <pre>{JSON.stringify(currentTask, null, 2)}</pre>
     </>
   );
 };

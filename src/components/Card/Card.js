@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import useTasks from "../../hooks/useTasks";
 import "./Card.css";
 
