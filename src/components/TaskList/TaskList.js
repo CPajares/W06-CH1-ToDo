@@ -16,9 +16,7 @@ const TaskList = () => {
           <Card
             onclick={(event) => clickDeleteTask(event, task.id)}
             key={task.id}
-            name={task.name}
-            state={task.state}
-            id={task.id}
+            task={task}
           />
         ))}
       </ul>

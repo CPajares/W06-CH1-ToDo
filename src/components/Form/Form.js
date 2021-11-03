@@ -2,7 +2,7 @@ import { useState } from "react";
 import useTasks from "../../hooks/useTasks";
 
 const Form = () => {
-  const { createTask } = useTasks();
+  const { currentTask, createTask } = useTasks();
 
   const initialData = {
     name: "",
@@ -32,14 +32,16 @@ const Form = () => {
           className="form-control"
           onChange={onChange}
           type="text"
-          value={newTaskData.name}
+          value={
+            currentTask.isEditing ? currentTask.task.name : newTaskData.name
+          }
           id="name"
           name="task"
         />
         <br />
 
         <button className="btn btn-primary" type="submit" value="Submit">
-          Create
+          {currentTask.isEditing ? "edit" : "create"}
         </button>
       </form>
     </>
